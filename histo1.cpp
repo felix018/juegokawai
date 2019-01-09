@@ -1,5 +1,11 @@
 #include "histo1.h"
 #include "ui_histo1.h"
+#include <QMessageBox>
+#include <QString>
+#include <ctype.h>
+#include <iostream>
+#include <fstream>
+#include "stdlib.h"
 
 histo1::histo1(QWidget *parent) :
     QMainWindow(parent),
@@ -11,4 +17,9 @@ histo1::histo1(QWidget *parent) :
 histo1::~histo1()
 {
     delete ui;
+}
+
+void histo1::on_siguiente_clicked()
+{
+
 }

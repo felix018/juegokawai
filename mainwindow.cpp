@@ -7,8 +7,10 @@
 #include "menu1.h"
 #include "menus2.h"
 #include "game.h"
+#include "histo1.h"
 game *gamm;
 menu1 *eleccion;
+histo1 *hist;
 int a = 0;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -21,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //gamm->player=true;
     ui->load->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
     ui->pushButton->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
+    ui->pushButton_3->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
 
 }
 
@@ -32,8 +35,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    eleccion = new menu1();
-    eleccion->show();
+    //eleccion = new menu1();
+    //eleccion->show();
+    //close();
+    hist = new histo1();
+    hist->show();
     close();
 }
 
