@@ -19,7 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //gamm=new game();
     //gamm->player=true;
-    ui->load->setStyleSheet("QPushButton { background-color : transparent; color : black; }");
+    ui->load->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
+    ui->pushButton->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
 
 }
 

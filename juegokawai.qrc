@@ -42,6 +42,7 @@
         <file>imágenes del juego/roja.png</file>
         <file>imágenes del juego/muñequita2 derechai.png</file>
         <file>imágenes del juego/fondo kawai 4.png</file>
-        <file>imagen buena.png</file>
+        <file>menu1.png</file>
+        <file>primerah.png</file>
     </qresource>
 </RCC>

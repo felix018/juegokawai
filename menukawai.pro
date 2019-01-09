@@ -35,10 +35,10 @@ SOURCES += \
     trampa.cpp \
     aliens.cpp \
     caida.cpp \
-    load.cpp \
     piedritas.cpp \
     menus2.cpp \
-    gemare.cpp
+    gemare.cpp \
+    histo1.cpp
 
 QT+= multimedia
 
@@ -54,16 +54,17 @@ HEADERS += \
     trampa.h \
     aliens.h \
     caida.h \
-    load.h \
     piedritas.h \
     menus2.h \
-    gemare.h
+    gemare.h \
+    histo1.h
 
 FORMS += \
         mainwindow.ui \
     menu1.ui \
     game.ui \
-    menus2.ui
+    menus2.ui \
+    histo1.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
