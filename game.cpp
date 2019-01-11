@@ -103,7 +103,7 @@ void game::keyPressEvent(QKeyEvent *event)
     //personaje 1
     if(event->key()==Qt::Key_M){
         per->settBanRight();
-        per->setPixmap(QPixmap(":/imágenes del juego/muñequita1 derecha.png"));
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita1 derechai.png"));
         qDebug() << "left";
     }else if (event->key() == Qt::Key_N){
         per->settBanLeft();
