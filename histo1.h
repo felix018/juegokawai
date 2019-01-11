@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "menu1.h"
+#include "histo2.h"
 #include <QWidget>
 #include <iostream>
 #include "stdlib.h"

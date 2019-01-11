@@ -38,7 +38,8 @@ SOURCES += \
     piedritas.cpp \
     menus2.cpp \
     gemare.cpp \
-    histo1.cpp
+    histo1.cpp \
+    histo2.cpp
 
 QT+= multimedia
 
@@ -57,14 +58,16 @@ HEADERS += \
     piedritas.h \
     menus2.h \
     gemare.h \
-    histo1.h
+    histo1.h \
+    histo2.h
 
 FORMS += \
         mainwindow.ui \
     menu1.ui \
     game.ui \
     menus2.ui \
-    histo1.ui
+    histo1.ui \
+    histo2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

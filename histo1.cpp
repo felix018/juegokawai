@@ -6,6 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include "stdlib.h"
+histo2 *histi;
 
 histo1::histo1(QWidget *parent) :
     QMainWindow(parent),
@@ -22,5 +23,7 @@ histo1::~histo1()
 
 void histo1::on_siguiente_clicked()
 {
-
+    histi = new histo2;
+    histi->show();
+    close();
 }

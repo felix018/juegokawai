@@ -44,5 +44,8 @@
         <file>imágenes del juego/muñequita shoot buen.png</file>
         <file>imágenes del juego/muñequita3 derechai.png</file>
         <file>imágenes del juego/muñequita3 izquierdai.png</file>
+        <file>entrandor.png</file>
+        <file>entrando.jpg</file>
+        <file>dentrosi.png</file>
     </qresource>
 </RCC>
