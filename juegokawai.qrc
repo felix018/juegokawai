@@ -5,10 +5,8 @@
         <file>imágenes del juego/muñequito.png</file>
         <file>imágenes del juego/muñequita2 izquierda.png</file>
         <file>imágenes del juego/muñequita2 derecha.png</file>
-        <file>imágenes del juego/muñequita3 derecha.png</file>
         <file>imágenes del juego/muñequita1.0 izquierda.png</file>
         <file>imágenes del juego/muñequita2.0 izquierda.png</file>
-        <file>imágenes del juego/muñequita3 izquierda.png</file>
         <file>imágenes del juego/fondo kawai 1.png</file>
         <file>imágenes del juego/plataforma1 fuego.png</file>
         <file>imágenes del juego/plataforma2 fuego.png</file>
@@ -44,5 +42,7 @@
         <file>imágenes del juego/muñequita1 derechai.png</file>
         <file>imágenes del juego/muñequita1 izquierdai2.png</file>
         <file>imágenes del juego/muñequita shoot buen.png</file>
+        <file>imágenes del juego/muñequita3 derechai.png</file>
+        <file>imágenes del juego/muñequita3 izquierdai.png</file>
     </qresource>
 </RCC>

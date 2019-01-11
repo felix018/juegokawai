@@ -168,10 +168,10 @@ void game::keyPressEvent(QKeyEvent *event)
 void game::keyReleaseEvent(QKeyEvent *event){
     if (event->key() == Qt::Key_M){
         per->resettBanRight();
-        per->setPixmap(QPixmap(":/imágenes del juego/muñequita3 derecha.png"));
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita3 derechai.png"));
     }else if (event->key()==Qt::Key_N) {
         per->resettBanLeft();
-        per->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierda.png"));
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }
     if(player==true){
         if(event->key()==Qt::Key_Z){
