@@ -107,7 +107,7 @@ void game::keyPressEvent(QKeyEvent *event)
         qDebug() << "left";
     }else if (event->key() == Qt::Key_N){
         per->settBanLeft();
-        per->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierda.png"));
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
         qDebug() << "right";
 
     }else if(event->key()==Qt::Key_J){ //en esta se salta
