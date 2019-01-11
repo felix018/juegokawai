@@ -12,6 +12,7 @@ histo1::histo1(QWidget *parent) :
     ui(new Ui::histo1)
 {
     ui->setupUi(this);
+     ui->siguiente->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
 }
 
 histo1::~histo1()
