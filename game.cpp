@@ -114,7 +114,7 @@ void game::keyPressEvent(QKeyEvent *event)
         per->setBandera();
     }else if(event->key()==Qt::Key_K){
         balin=new disparos();
-        per->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot bue.png"));
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot buen.png"));
         balin->setPixmap(QPixmap(":/imágenes del juego/espin.png"));
         balin->setPos(per->x()+60,per->y()+20); //posicionar la espada con respecto al per
         scene->addItem(balin);
