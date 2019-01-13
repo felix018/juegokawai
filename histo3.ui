@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>histo2</class>
- <widget class="QMainWindow" name="histo2">
+ <class>histo3</class>
+ <widget class="QMainWindow" name="histo3">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,38 +14,28 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QLabel" name="history3">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>600</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>-4</x>
+      <x>6</x>
       <y>2</y>
-      <width>601</width>
-      <height>571</height>
+      <width>600</width>
+      <height>600</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="juegokawai.qrc">:/entrandor.png</pixmap>
+     <pixmap resource="juegokawai.qrc">:/dentrosi.png</pixmap>
     </property>
    </widget>
-   <widget class="QPushButton" name="seguiri">
+   <widget class="QPushButton" name="seguir">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>91</width>
+      <x>460</x>
+      <y>60</y>
+      <width>81</width>
       <height>31</height>
      </rect>
     </property>

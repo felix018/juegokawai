@@ -19,6 +19,9 @@ public:
     explicit histo2(QWidget *parent = nullptr);
     ~histo2();
 
+private slots:
+    void on_seguiri_clicked();
+
 private:
     Ui::histo2 *ui;
 };

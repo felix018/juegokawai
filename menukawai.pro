@@ -39,7 +39,9 @@ SOURCES += \
     menus2.cpp \
     gemare.cpp \
     histo1.cpp \
-    histo2.cpp
+    histo2.cpp \
+    histo3.cpp \
+    histo4.cpp
 
 QT+= multimedia
 
@@ -59,7 +61,9 @@ HEADERS += \
     menus2.h \
     gemare.h \
     histo1.h \
-    histo2.h
+    histo2.h \
+    histo3.h \
+    histo4.h
 
 FORMS += \
         mainwindow.ui \
@@ -67,7 +71,9 @@ FORMS += \
     game.ui \
     menus2.ui \
     histo1.ui \
-    histo2.ui
+    histo2.ui \
+    histo3.ui \
+    histo4.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
