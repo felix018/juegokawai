@@ -14,7 +14,6 @@
         <file>imágenes del juego/fondo kawai 3.jpeg</file>
         <file>imágenes del juego/plataforma agua 1.png</file>
         <file>imágenes del juego/plataforma2.png</file>
-        <file>imágenes del juego/malo1.png</file>
         <file>imágenes del juego/bola de fuego2.png</file>
         <file>imágenes del juego/muñequita shoot.png</file>
         <file>imágenes del juego/espin.png</file>
@@ -48,5 +47,10 @@
         <file>entrando.jpg</file>
         <file>dentrosi.png</file>
         <file>finalh.png</file>
+        <file>imágenes del juego/malpos1.png</file>
+        <file>imágenes del juego/malpos5.png</file>
+        <file>imágenes del juego/malpos2.png</file>
+        <file>imágenes del juego/malpos3.png</file>
+        <file>imágenes del juego/malpos4.png</file>
     </qresource>
 </RCC>

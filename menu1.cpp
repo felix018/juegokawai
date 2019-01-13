@@ -17,6 +17,8 @@ menu1::menu1(QWidget *parent) :
     ui(new Ui::menu1)
 {
     ui->setupUi(this);
+    ui->saved->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
+    ui->return_2->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
     playing =new QMediaPlayer(this);
     playing->setMedia(QUrl(":/OmegaVH19_Trim (online-audio-converter.com).mp3"));
     playing->play();
