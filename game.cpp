@@ -8,7 +8,6 @@
 #include "trampa.h"
 #include "caida.h"
 #include "piedritas.h"
-//#include "gemawin.h"
 #include <QString>
 #include <ctype.h>
 #include "stdlib.h"
@@ -129,16 +128,16 @@ void game::keyPressEvent(QKeyEvent *event)
         if(rect->collidesWithItem(per)){
             vid->decrece1();
             qDebug()<<"mori";
-            if(player==true){
-                vid2->decrece2();
-                qDebug()<<"mori2";
-            }
+            //if(player==true){
+              //  vid2->decrece2();
+                //qDebug()<<"mori2";
+            //}
 
         }
 
     }
 
-
+/*
     if(player==true){
         if(event->key()==Qt::Key_Z){
             per2->settBanRight();
@@ -163,6 +162,7 @@ void game::keyPressEvent(QKeyEvent *event)
         }
 
     }
+    */
 
 }
 void game::keyReleaseEvent(QKeyEvent *event){
@@ -173,6 +173,7 @@ void game::keyReleaseEvent(QKeyEvent *event){
         per->resettBanLeft();
         per->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }
+    /*
     if(player==true){
         if(event->key()==Qt::Key_Z){
             per2->resettBanRight();
@@ -181,6 +182,7 @@ void game::keyReleaseEvent(QKeyEvent *event){
         }
 
     }
+    */
 }
 void game::puntajes(){
     p1+=10;
@@ -217,11 +219,13 @@ void game::niveles(){
         per->setHeight(HEIGHT);   //altura máxima
 
         per->setPos(15, 250);//posición del personaje
+        /*
         if(player==true){
             per2->setPixmap(QPixmap(":/imágenes del juego/per2.png"));
             per2->setPos(15,280);
             per2->setHeight(HEIGHT);
         }
+        */
         per->c=0;   //para volver a ver villanos
 
         TGame->start(2500); //comienza de nuevo los timers

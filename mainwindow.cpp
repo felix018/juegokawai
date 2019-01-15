@@ -8,9 +8,11 @@
 #include "menus2.h"
 #include "game.h"
 #include "histo1.h"
+#include "play2.h"
 game *gamm;
 menu1 *eleccion;
 histo1 *hist;
+play2 *gamme;
 int a = 0;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -48,8 +50,11 @@ void MainWindow::on_pushButton_3_clicked()
     //gamm=new game();
     //gamm->player=true;
     a=1;
-    eleccion = new menu1();
-    eleccion->show();
+//eleccion = new menu1();
+    //eleccion->show();
+    //close();
+    gamme = new play2();
+    gamme->show();
     close();
 
 }

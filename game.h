@@ -12,7 +12,7 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsTextItem>
 #include <QGraphicsPixmapItem>
-#include <QWidget>
+//#include <QWidget>
 #include <personaje.h>
 #include "vida.h"
 #include "disparos.h"

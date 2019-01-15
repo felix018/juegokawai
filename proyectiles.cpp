@@ -1,5 +1,6 @@
 #include "proyectiles.h"
 #include "game.h"
+#include "menu1.h"
 extern game *gamm;
 
 
@@ -15,12 +16,14 @@ void proyectiles::move(){
     for (int i = 0, n = colliding_items.size(); i < n; i++ ){
         if (typeid(*(colliding_items[i])) == typeid(personaje)){
             gamm->scene->removeItem(this);
+
             if(colliding_items[i]==gamm->per){
                 gamm->vid->decrece1();
                 if(gamm->player==true){
                     gamm->vid2->decrece2();
                 }
                  qDebug()<<"bye1";
+
             }
              gamm->vt=(gamm->vid->vid1)*10;
              qDebug()<<gamm->vt<<"zzzzzzz";
