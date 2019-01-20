@@ -9,10 +9,12 @@
 #include "game.h"
 #include "histo1.h"
 #include "play2.h"
+#include "segundo.h"
 game *gamm;
 menu1 *eleccion;
 histo1 *hist;
 play2 *gamme;
+segundo *sec;
 int a = 0;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -49,13 +51,17 @@ void MainWindow::on_pushButton_3_clicked()
 {
     //gamm=new game();
     //gamm->player=true;
-    a=1;
+
 //eleccion = new menu1();
     //eleccion->show();
     //close();
-    gamme = new play2();
-    gamme->show();
+    sec=new segundo;
+    sec->show();
     close();
+    //gamme = new play2();
+    //gamme->show();
+    //close();
+    //a=1;
 
 }
 

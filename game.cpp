@@ -58,23 +58,23 @@ void game::iniciar(int a){
         Jtime->start(45);
 //---------------------------personaje2----------------------------------------------------------
 
-        if(a==1){
-            per2=new personaje();
-            per2->setPixmap(QPixmap(":/imágenes del juego/per2.png"));
-            per2->setPos(15,280);
-            per2->setHeight(HEIGHT);
-            scene->addItem(per2);
-            QObject::connect(Jtime, SIGNAL(timeout()),per2,SLOT(jump()));
+        //if(a==1){
+            //per2=new personaje();
+            //per2->setPixmap(QPixmap(":/imágenes del juego/per2.png"));
+            //per2->setPos(15,280);
+            //per2->setHeight(HEIGHT);
+            //scene->addItem(per2);
+            //QObject::connect(Jtime, SIGNAL(timeout()),per2,SLOT(jump()));
 
 
-        }
+        //}
 
 //------------------------------------timers de los villanos y de las trampas----------------------
         QObject::connect(TGame, SIGNAL(timeout()),per,SLOT(generar()));
         QObject::connect(TGame2, SIGNAL(timeout()),per,SLOT(generar2()));
         //QObject::connect(Tcaer, SIGNAL(timeout()),per,SLOT(generar3()));
         TGame->start(2000);
-        TGame2->start(2000);
+        //TGame2->start(2000);
         //Tcaer->start(2000);
 
         vid = new vida();
@@ -83,7 +83,7 @@ void game::iniciar(int a){
 //--------------------------------------pinchos---------------------------------------------------
         plat->setPixmap(QPixmap(":/imágenes del juego/pini.png"));
         rect = new QGraphicsRectItem();
-        rect->setRect(400,330,140,10);
+        rect->setRect(400,288,140,10);
 
         plat->setPos(400,288);
         scene->addItem(rect);
@@ -92,7 +92,7 @@ void game::iniciar(int a){
 
 
     }
-//--------------------------------gemas---------------------------------------------------
+
 
 
 }
@@ -269,9 +269,42 @@ void game::niveles(){
         scene->removeItem(huevo3);
         scene->clear();
 //----------------------------------------------------------------------------------------
-        scene->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/nivel33.png")));
+        scene->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/esc3.png")));
         scene->addItem(per);
        //------------definir otra vez--------------------------------------
+        per->setPixmap(QPixmap(":/imágenes del juego/muñequita2 derecha.png"));
+        per->setHeight(HEIGHT);   //altura máxima
+
+        per->setPos(15, 250);//posición del personaje
+        per->c=0;   //para volver a ver villanos
+        TGame2->start(2000);
+        TGame->start(2000);
+        trick=new trampa();
+        trick->setPos(800,300);
+        scene->addItem(trick);
+        team=new trampa();
+        team->setPos(250,300);
+        scene->addItem(team);
+
+        //piedritas *pier = new piedritas();
+        //pier->setPos(100,70);
+        //scene->addItem(pier);
+        //gemare *gemi = new gemare();
+        //gemi->setPos(730,70);
+        //scene->addItem(gemi);
+
+
+
+
+    }else if(cont==3){
+        TGame->stop();
+        TGame2->stop();
+        scene->removeItem(per);
+        scene->clear();
+//----------------------------------------rellenar--------------------------------
+        scene->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/esc4.png")));
+        scene->addItem(per);
+//---------------------------------------------------------------------------------
         per->setPixmap(QPixmap(":/imágenes del juego/muñequita2 derecha.png"));
         per->setHeight(HEIGHT);   //altura máxima
 
@@ -284,9 +317,6 @@ void game::niveles(){
         gemare *gemi = new gemare();
         gemi->setPos(730,70);
         scene->addItem(gemi);
-
-
-
 
     }
 //-----------------------------------------------------------------------------------level3
@@ -308,11 +338,10 @@ void game::on_guardado_clicked()
 {
     ofstream save;                                                   //Define el archivo en modo de escritura
        save.open(eleccion->b,ios::out);                                     //Abre el archivo
+       cout<<"estoy guardando"<<endl;
        save<<cont<<endl;                                                //Escribe el nivel actual
-       save<<p1<<endl;                                                  //Escriber el puntaje del jugador 1
-       if(player==true){
-           save<<p2<<endl;
-       }
+       //save<<p1<<endl;                                                  //Escriber el puntaje del jugador 1
+
                                                         //Escribe el puntaje del jugador 2
        save.close();
 

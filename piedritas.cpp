@@ -7,9 +7,11 @@ extern game *gamm;
 piedritas::piedritas()
 {
 
-    setPixmap(QPixmap(":/imágenes del juego/azul.png"));
+    setPixmap(QPixmap(":/imágenes del juego/roja.png"));
     connect(tel,SIGNAL(timeout()),this, SLOT(move()));
     connect(vil,SIGNAL(timeout()),gamm->per, SLOT(generar()));
+    connect(vil,SIGNAL(timeout()),gamm->per, SLOT(generar2()));
+
 
     tel->start(50);
 

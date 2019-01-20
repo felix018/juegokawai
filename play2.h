@@ -37,7 +37,7 @@ public:
     personaje *personita;
     QTimer *interaccion;
 
-    //void keyPressEvent(QKeyEvent * event);
+    void keyPressEvent(QKeyEvent * event);
     //void keyReleaseEvent(QKeyEvent * event);
     void setHeight(int w);
     int cont=0;
@@ -55,11 +55,15 @@ public:
     vida *vida2;
     bool playe=false;
 
+    QTimer *interar;
+
+
+
     QTimer *Jtimen=new QTimer();
     QTimer *TGamen = new QTimer();
     QTimer *TGame2n = new QTimer();
 
-    void inicia(int juego);
+    void inicia();
 
 private:
     Ui::play2 *ui;

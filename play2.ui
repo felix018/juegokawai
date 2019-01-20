@@ -16,10 +16,10 @@
   <widget class="QGraphicsView" name="ver">
    <property name="geometry">
     <rect>
-     <x>-5</x>
-     <y>1</y>
-     <width>1011</width>
-     <height>401</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>400</height>
     </rect>
    </property>
   </widget>
