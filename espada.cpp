@@ -1,24 +1,22 @@
-#include "disparos.h"
+#include "espada.h"
 #include "villanos.h"
-#include "game.h"
 #include "play2.h"
 
-extern game *gamm;
 extern play2 *gamme;
 
-disparos::disparos()
+espada::espada()
 {
-    connect(tim,SIGNAL(timeout()),this, SLOT(move()));   //timer de movimiento
-    //for(int i=50; i<70;i+5) //movimiento uniformemente acelerado
-    tim->start(50);
+    connect(toma,SIGNAL(timeout()),this, SLOT(mueve()));
+    toma->start(50);
 
 }
-void disparos::move(){
+void espada::mueve()
+{
     QList<QGraphicsItem *> colliding_items = collidingItems(); // lista de proyectiles
     for (int i = 0, n = colliding_items.size(); i < n; i++ ){ // se recorre la lista  proyectiles
         if (typeid(*(colliding_items[i])) == typeid(villanos)){//condición para eliminación
-            scene()->removeItem(colliding_items[i]);//se remueve al villano de la escena
-            scene()->removeItem(this);  //adiós proyectil
+            gamme->scenes->removeItem(colliding_items[i]);//se remueve al villano de la escena
+            gamme->scenes->removeItem(this);  //adiós proyectil
             //gamm->p1=gamm->p1+10;  //se suman 10 al puntaje
             delete colliding_items[i]; //liberar memoria
             return;
@@ -29,10 +27,11 @@ void disparos::move(){
          scene()->removeItem(this);
          delete this;  //se libera la memoria
      }
-     if(gamm->vid->vid1<=0){
-          tim->stop();  //se para el timer
+     if(gamme->vidas1->vid1<=0){
+          toma->stop();  //se para el timer
      }
      //if(gamme->vidas1->vid1<=0){
          //tim->stop();
      //}
+
 }

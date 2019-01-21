@@ -16,6 +16,7 @@ class proyectiles : public QObject, public QGraphicsPixmapItem
 public:
     proyectiles();
     QTimer *tel = new QTimer();
+    bool tipo=false;
 
 public slots:
     void move();//proyectiles personajes

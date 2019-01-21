@@ -44,7 +44,11 @@ SOURCES += \
     histo4.cpp \
     plumas.cpp \
     play2.cpp \
-    segundo.cpp
+    segundo.cpp \
+    espada.cpp \
+    prum.cpp \
+    jefe.cpp \
+    huevi.cpp
 
 QT+= multimedia
 
@@ -69,7 +73,11 @@ HEADERS += \
     histo4.h \
     plumas.h \
     play2.h \
-    segundo.h
+    segundo.h \
+    espada.h \
+    prum.h \
+    jefe.h \
+    huevi.h
 
 FORMS += \
         mainwindow.ui \

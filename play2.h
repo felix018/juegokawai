@@ -14,10 +14,10 @@
 #include <QGraphicsPixmapItem>
 #include <personaje.h>
 #include "vida.h"
-#include "disparos.h"
 #include "trampa.h"
 #include "caida.h"
 #include "joyas.h"
+
 #define WIDTH 1000
 #define HEIGHT 400
 
@@ -37,22 +37,23 @@ public:
     personaje *personita;
     QTimer *interaccion;
 
-    void keyPressEvent(QKeyEvent * event);
-    //void keyReleaseEvent(QKeyEvent * event);
+    void keyPressEvent(QKeyEvent * events);
+    void keyReleaseEvent(QKeyEvent * events);
     void setHeight(int w);
     int cont=0;
-    int vt;
+    int outside=0;
+    int vto;
     int p1=0, p2=0;
     int cambio=0;
     int flag=0;
     bool player=false;
     int huevos=10;
     QGraphicsTextItem *tex;
-    disparos *baline;
-    disparos *balin1;
+    //disparos *espada;
+    //disparos *espada1;
     //parte de las vidas
-    vida *vida1;
-    vida *vida2;
+    vida *vidas1;
+    vida *vidas2;
     bool playe=false;
 
     QTimer *interar;
@@ -63,7 +64,7 @@ public:
     QTimer *TGamen = new QTimer();
     QTimer *TGame2n = new QTimer();
 
-    void inicia();
+    void inicia(int u);
 
 private:
     Ui::play2 *ui;

@@ -58,6 +58,7 @@ void MainWindow::on_pushButton_3_clicked()
     sec=new segundo;
     sec->show();
     close();
+
     //gamme = new play2();
     //gamme->show();
     //close();

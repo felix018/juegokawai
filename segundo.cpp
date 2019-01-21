@@ -28,6 +28,7 @@ void segundo::on_holi_clicked()
     gamme = new play2();
     gamme->show();
     close();
-    gamme->inicia();
+    u=1;
+    gamme->inicia(u);
         //a=1;
 }

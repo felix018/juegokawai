@@ -17,6 +17,7 @@ class segundo : public QWidget
 public:
     explicit segundo(QWidget *parent = nullptr);
     ~segundo();
+    int u=0;
 
 private slots:
     void on_holi_clicked();

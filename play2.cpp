@@ -11,6 +11,9 @@
 #include <ctype.h>
 #include "stdlib.h"
 #include "gemare.h"
+#include "espada.h"
+#include "segundo.h"
+segundo *vamos;
 
 using namespace std;
 
@@ -30,12 +33,20 @@ play2::play2(QWidget *parent) :
     ui->ver->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);    //Quita la barra de desplazamineto lateral
     ui->ver->setScene(scenes);
     setFixedSize(WIDTH,HEIGHT);
+    //qDebug()<<"resultado de u"<<vamos->u<<"mireloooo";
+    //if(vamos->u==1){
+        //outside=1;
+    //}
 
 //---------------------------personaje-----------------------------------
 
 }
-void play2::inicia()
+void play2::inicia(int u)
 {
+
+    if(u==1){
+        outside=1;
+    }
     //if (a == 1) playe = true;
     scenes->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/levelP2e.png")));
 //-------------------------------------------personajes---------------------------------------------------
@@ -53,24 +64,66 @@ void play2::inicia()
     scenes->addItem(personita);
     //QObject::connect(Jtimen, SIGNAL(timeout()),personita,SLOT(jump()));
 //-------------------------------Timers villanos y trampas-------------------------------
-    QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
-    QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
-    vida1 = new vida();
-    vida2 = new vida();
+    //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
+    //QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
+    vidas1 = new vida();
+    vidas2 = new vida();
+    //TGamen->start(2000);
 
     QObject::connect(Jtimen, SIGNAL(timeout()),persona,SLOT(jump()));
     Jtimen->start(45);
 }
-void play2::keyPressEvent(QKeyEvent * event){
+void play2::keyPressEvent(QKeyEvent * events){
 //----------------personaje 1-----------------------------------------
-    if(event->key()==Qt::Key_M){
+    if(events->key()==Qt::Key_U){
         persona->settBanRight();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 derechai.png"));
         qDebug() << "left";
-    }else if (event->key() == Qt::Key_N){
+    }else if (events->key() == Qt::Key_I){
         persona->settBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
         qDebug() << "right";
+    }else if(events->key()==Qt::Key_L){ //en esta se salta
+        persona->setBandera();
+    }else if(events->key()==Qt::Key_H){
+        /*
+        espada=new disparos();
+        qDebug()<<"dispararrrrrrr";
+        persona->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot buen.png"));
+        espada->setPixmap(QPixmap(":/imágenes del juego/espin.png"));
+        espada->setPos(persona->x()+60,persona->y()+20); //posicionar la espada con respecto al per
+        scenes->addItem(espada);
+        qDebug() << "piu";
+        */
+        //qDebug()<<"resultado de u"<<vamos->u<<"mireloooo";
+        espada *espol;
+        espol=new espada();
+        qDebug()<<"dispararrrrrrr";
+        persona->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot buen.png"));
+        espol->setPixmap(QPixmap(":/imágenes del juego/espin.png"));
+        espol->setPos(persona->x()+60,persona->y()+20);
+        scenes->addItem(espol);
+        qDebug()<< "piuuuuuu";
+    }
+
+//-------------------------------------------personaje2---------------------------------
+    if(events->key()==Qt::Key_S){
+        personita->settBanRight();
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derecha.png"));
+        qDebug() << "left";
+    }else if (events->key() == Qt::Key_I){
+        personita->settBanLeft();
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
+        qDebug() << "right";
+    }
+}
+void play2::keyReleaseEvent(QKeyEvent *event){
+    if (event->key() == Qt::Key_U){
+        persona->resettBanRight();
+        persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 derechai.png"));
+    }else if (event->key()==Qt::Key_I) {
+        persona->resettBanLeft();
+        persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }
 }
 
