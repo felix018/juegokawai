@@ -12,6 +12,8 @@
 #include <villanos.h>
 #include "aliens.h"
 #include "caida.h"
+//#include "alien2.h"
+//#include "play2.h"
 #define WIDTH 1000
 #define HEIGHT 400
 

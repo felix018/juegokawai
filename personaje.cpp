@@ -2,6 +2,9 @@
 #include <iostream>
 #include<QDebug>
 #include <QGraphicsPixmapItem>
+#include "alien2.h"
+#include "play2.h"
+extern play2 *gamme;
 
 personaje::personaje(QGraphicsItem *parent): QObject (), QGraphicsPixmapItem(parent)
 {
@@ -104,6 +107,9 @@ void personaje::generar2(){
 
 }
 void personaje::generar3(){
+    alien2 *gul = new alien2();
+    gul->setPos(WIDTH-100, 15);
+    gamme->scenes->addItem(gul);
 
 
 }

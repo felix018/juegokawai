@@ -5,10 +5,10 @@ extern play2 *gamme;
 prum::prum()
 {
     setPixmap(QPixmap(":/imágenes del juego/plumi.png"));
-    connect(chronos,SIGNAL(timeout()),this, SLOT(mov()));
+    connect(chronos,SIGNAL(timeout()),this, SLOT(movi()));
     chronos->start(50);
 }
-void prum::mov()
+void prum::movi()
 {
     setPos(x(), y()+20);
     QList<QGraphicsItem *> colliding_items = collidingItems();
@@ -22,6 +22,7 @@ void prum::mov()
             return;
         }
     }
+
     if(y() >380){
         setPos(x(),y());
         gamme->scenes->removeItem(this);

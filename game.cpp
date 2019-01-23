@@ -35,6 +35,12 @@ game::game(QWidget *parent) :
     ui->view->setScene(scene);
     setFixedSize(WIDTH,HEIGHT);
     qDebug()<<cont<<" "<<p1;
+
+
+
+
+
+
 //-----------------------------comienzo intento del personaje-------------------------------------
 
 

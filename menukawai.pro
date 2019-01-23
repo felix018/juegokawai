@@ -48,7 +48,8 @@ SOURCES += \
     espada.cpp \
     prum.cpp \
     jefe.cpp \
-    huevi.cpp
+    huevi.cpp \
+    alien2.cpp
 
 QT+= multimedia
 
@@ -77,7 +78,8 @@ HEADERS += \
     espada.h \
     prum.h \
     jefe.h \
-    huevi.h
+    huevi.h \
+    alien2.h
 
 FORMS += \
         mainwindow.ui \

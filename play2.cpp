@@ -66,9 +66,10 @@ void play2::inicia(int u)
 //-------------------------------Timers villanos y trampas-------------------------------
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
     //QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
+    QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar3()));
     vidas1 = new vida();
     vidas2 = new vida();
-    //TGamen->start(2000);
+    TGame2n->start(2000);
 
     QObject::connect(Jtimen, SIGNAL(timeout()),persona,SLOT(jump()));
     Jtimen->start(45);
