@@ -12,6 +12,7 @@
 #include <villanos.h>
 #include "aliens.h"
 #include "caida.h"
+#include "tekiga.h"
 //#include "alien2.h"
 //#include "play2.h"
 #define WIDTH 1000
@@ -55,6 +56,7 @@ public slots:
         void generar();
         void generar2();
         void generar3();
+        void generar4();
         void jump();
         void setHeight(int);
         void set_jump(int bul);

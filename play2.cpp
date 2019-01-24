@@ -13,6 +13,7 @@
 #include "gemare.h"
 #include "espada.h"
 #include "segundo.h"
+#include "tekiga.h"
 segundo *vamos;
 
 using namespace std;
@@ -67,9 +68,11 @@ void play2::inicia(int u)
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
     //QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
     QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar3()));
+    QObject::connect(TGame3n, SIGNAL(timeout()),persona,SLOT(generar4()));
     vidas1 = new vida();
     vidas2 = new vida();
     TGame2n->start(2000);
+    TGame3n->start(2000);
 
     QObject::connect(Jtimen, SIGNAL(timeout()),persona,SLOT(jump()));
     Jtimen->start(45);

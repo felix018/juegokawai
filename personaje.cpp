@@ -4,6 +4,7 @@
 #include <QGraphicsPixmapItem>
 #include "alien2.h"
 #include "play2.h"
+#include "tekiga.h"
 extern play2 *gamme;
 
 personaje::personaje(QGraphicsItem *parent): QObject (), QGraphicsPixmapItem(parent)
@@ -111,6 +112,15 @@ void personaje::generar3(){
     gul->setPos(WIDTH-100, 15);
     gamme->scenes->addItem(gul);
 
+
+}
+void personaje::generar4(){
+    c++;
+    if(c<12){
+        tekiga *ga = new tekiga();
+        ga->setPos(WIDTH-100,HEIGHT-180);
+        gamme->scenes->addItem(ga);
+    }
 
 }
 

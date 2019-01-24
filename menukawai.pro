@@ -50,7 +50,8 @@ SOURCES += \
     jefe.cpp \
     huevi.cpp \
     alien2.cpp \
-    teki.cpp
+    tekiga.cpp \
+    ultimod.cpp
 
 QT+= multimedia
 
@@ -81,7 +82,8 @@ HEADERS += \
     jefe.h \
     huevi.h \
     alien2.h \
-    teki.h
+    tekiga.h \
+    ultimod.h
 
 FORMS += \
         mainwindow.ui \

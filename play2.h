@@ -63,6 +63,7 @@ public:
     QTimer *Jtimen=new QTimer();
     QTimer *TGamen = new QTimer();
     QTimer *TGame2n = new QTimer();
+    QTimer *TGame3n = new QTimer();
 
     void inicia(int u);
 
