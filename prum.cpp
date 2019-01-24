@@ -18,6 +18,9 @@ void prum::movi()
             if(colliding_items[i]==gamme->persona){
                  gamme->vidas1->decreceN2();
             }
+            if(colliding_items[i]==gamme->personita){
+                gamme->vidas2->decrecerN2();
+            }
             qDebug()<<"bye1";
             return;
         }

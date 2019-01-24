@@ -62,7 +62,7 @@ void play2::inicia(int u)
     personita->setPos(15,280);
     personita->setHeight(HEIGHT);
     scenes->addItem(personita);
-    //QObject::connect(Jtimen, SIGNAL(timeout()),personita,SLOT(jump()));
+    QObject::connect(Jtimen, SIGNAL(timeout()),personita,SLOT(jump()));
 //-------------------------------Timers villanos y trampas-------------------------------
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
     //QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
@@ -112,10 +112,21 @@ void play2::keyPressEvent(QKeyEvent * events){
         personita->settBanRight();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derecha.png"));
         qDebug() << "left";
-    }else if (events->key() == Qt::Key_I){
+    }else if (events->key() == Qt::Key_A){
         personita->settBanLeft();
-        personita->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdai2.png"));
         qDebug() << "right";
+    }else if(events->key()==Qt::Key_W){ //en esta se salta
+        personita->setBandera();
+    }else if(events->key()==Qt::Key_Q){
+        espada *espi;
+        espi = new espada();
+        qDebug()<<"dispararrrrrrr";
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot buen.png"));
+        espi->setPixmap(QPixmap(":/imágenes del juego/espin.png"));
+        espi->setPos(personita->x()+60,personita->y()+20);
+        scenes->addItem(espi);
+        qDebug()<< "piuuuuuu";
     }
 }
 void play2::keyReleaseEvent(QKeyEvent *event){
@@ -125,6 +136,14 @@ void play2::keyReleaseEvent(QKeyEvent *event){
     }else if (event->key()==Qt::Key_I) {
         persona->resettBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
+    }
+//--------------------------personaje 2-------------------------------------------------
+    if (event->key() == Qt::Key_S){
+        personita->resettBanRight();
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derechai.png"));
+    }else if (event->key()==Qt::Key_A) {
+        personita->resettBanLeft();
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdaa.png"));
     }
 }
 

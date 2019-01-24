@@ -51,5 +51,8 @@
         <file>imágenes del juego/esc3.png</file>
         <file>imágenes del juego/esc4.png</file>
         <file>imágenes del juego/muñequito1 derecha.png</file>
+        <file>imágenes del juego/muñequito1 derechai.png</file>
+        <file>imágenes del juego/muñequito1 izquierdaa.png</file>
+        <file>imágenes del juego/muñequito1 izquierdai2.png</file>
     </qresource>
 </RCC>

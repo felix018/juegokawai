@@ -35,6 +35,14 @@ void vida::decreceN2(){
     qDebug()<<vid1;
     if(vid1<=0) gameover();
 }
+void vida::decrecerN2(){
+    vid2--;
+    if(vid2<1){
+            vid1=0;
+            decreceN2();
+        };
+
+}
 void vida::decreceJazul(){
     vid1=3;
     qDebug()<<"joya azul";
