@@ -16,7 +16,7 @@ void prum::movi()
         if (typeid(*(colliding_items[i])) == typeid(personaje)){
             gamme->scenes->removeItem(this);
             if(colliding_items[i]==gamme->persona){
-                 gamme->vidas1->decrece1();
+                 gamme->vidas1->decreceN2();
             }
             qDebug()<<"bye1";
             return;

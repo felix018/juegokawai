@@ -49,7 +49,8 @@ SOURCES += \
     prum.cpp \
     jefe.cpp \
     huevi.cpp \
-    alien2.cpp
+    alien2.cpp \
+    teki.cpp
 
 QT+= multimedia
 
@@ -79,7 +80,8 @@ HEADERS += \
     prum.h \
     jefe.h \
     huevi.h \
-    alien2.h
+    alien2.h \
+    teki.h
 
 FORMS += \
         mainwindow.ui \

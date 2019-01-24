@@ -4,6 +4,8 @@
 #include <QFont>
 #include "personaje.h"
 #include "trampa.h"
+#include "play2.h"
+extern play2 *gamme;
 
 extern game *gamm;
 
@@ -28,6 +30,11 @@ void vida::decrece2(){
             decrece1();
         };
 }
+void vida::decreceN2(){
+    vid1--;
+    qDebug()<<vid1;
+    if(vid1<=0) gameover();
+}
 void vida::decreceJazul(){
     vid1=3;
     qDebug()<<"joya azul";
@@ -45,6 +52,20 @@ void vida::GameOver(){
       over->setDefaultTextColor(Qt::white);
       over->setFont(QFont("DEATH",50));
       gamm->scene->addItem(over);
+
+}
+void vida::gameover(){
+    qDebug()<<"Game  Over";
+    gamme->scenes->setBackgroundBrush(Qt::black);
+    gamme->scenes->removeItem(gamme->persona);
+    gamme->scenes->removeItem(gamme->personita);
+    gamme->TGame2n->stop();
+    gamme->scenes->clear();
+    over->setPlainText(QString("GAME OVER"));
+    over->setPos(300,100);
+    over->setDefaultTextColor(Qt::white);
+    over->setFont(QFont("DEATH",50));
+    gamme->scenes->addItem(over);
 
 }
 

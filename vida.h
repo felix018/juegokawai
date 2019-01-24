@@ -21,8 +21,11 @@ public:
     QGraphicsTextItem *over;
     void decrece1();
     void decrece2();
+    void decreceN2();
+    void decrecerN2();
     void decreceJazul();
     void GameOver();
+    void gameover();
 private slots:
 
 
