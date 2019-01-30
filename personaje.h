@@ -12,7 +12,7 @@
 #include <villanos.h>
 #include "aliens.h"
 #include "caida.h"
-#include "tekiga.h"
+#include "fy.h"
 //#include "alien2.h"
 //#include "play2.h"
 #define WIDTH 1000
@@ -33,6 +33,7 @@ public:
      villanos * enemigo;
      villanos *tramp;
      caida *caer;
+     FY *kilua;
     /*
     QPixmap *paranguti;
     float ancho=47,alto=57;

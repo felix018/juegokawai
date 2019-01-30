@@ -13,7 +13,7 @@
 #include "gemare.h"
 #include "espada.h"
 #include "segundo.h"
-#include "tekiga.h"
+//#include "tekiga.h"
 segundo *vamos;
 
 using namespace std;
@@ -66,30 +66,31 @@ void play2::inicia(int u)
     QObject::connect(Jtimen, SIGNAL(timeout()),personita,SLOT(jump()));
 //-------------------------------Timers villanos y trampas-------------------------------
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
-    //QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar2()));
-    QObject::connect(TGame2n, SIGNAL(timeout()),persona,SLOT(generar3()));
-    QObject::connect(TGame3n, SIGNAL(timeout()),persona,SLOT(generar4()));
+    QObject::connect(raptalia, SIGNAL(timeout()),persona,SLOT(generar4()));
+    QObject::connect(alis, SIGNAL(timeout()),persona,SLOT(generar3()));
+
     vidas1 = new vida();
     vidas2 = new vida();
-    TGame2n->start(2000);
-    TGame3n->start(2000);
+    alis->start(2000);
+    raptalia->start(2000);
+
 
     QObject::connect(Jtimen, SIGNAL(timeout()),persona,SLOT(jump()));
     Jtimen->start(45);
 }
 void play2::keyPressEvent(QKeyEvent * events){
 //----------------personaje 1-----------------------------------------
-    if(events->key()==Qt::Key_U){
+    if(events->key()==Qt::Key_J){
         persona->settBanRight();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 derechai.png"));
         qDebug() << "left";
-    }else if (events->key() == Qt::Key_I){
+    }else if (events->key() == Qt::Key_K){
         persona->settBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
         qDebug() << "right";
-    }else if(events->key()==Qt::Key_L){ //en esta se salta
+    }else if(events->key()==Qt::Key_U){ //en esta se salta
         persona->setBandera();
-    }else if(events->key()==Qt::Key_H){
+    }else if(events->key()==Qt::Key_I){
         /*
         espada=new disparos();
         qDebug()<<"dispararrrrrrr";
@@ -111,17 +112,17 @@ void play2::keyPressEvent(QKeyEvent * events){
     }
 
 //-------------------------------------------personaje2---------------------------------
-    if(events->key()==Qt::Key_S){
+    if(events->key()==Qt::Key_Z){
         personita->settBanRight();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derecha.png"));
         qDebug() << "left";
-    }else if (events->key() == Qt::Key_A){
+    }else if (events->key() == Qt::Key_X){
         personita->settBanLeft();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdai2.png"));
         qDebug() << "right";
-    }else if(events->key()==Qt::Key_W){ //en esta se salta
+    }else if(events->key()==Qt::Key_A){ //en esta se salta
         personita->setBandera();
-    }else if(events->key()==Qt::Key_Q){
+    }else if(events->key()==Qt::Key_S){
         espada *espi;
         espi = new espada();
         qDebug()<<"dispararrrrrrr";
@@ -133,18 +134,18 @@ void play2::keyPressEvent(QKeyEvent * events){
     }
 }
 void play2::keyReleaseEvent(QKeyEvent *event){
-    if (event->key() == Qt::Key_U){
+    if (event->key() == Qt::Key_J){
         persona->resettBanRight();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 derechai.png"));
-    }else if (event->key()==Qt::Key_I) {
+    }else if (event->key()==Qt::Key_K) {
         persona->resettBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }
 //--------------------------personaje 2-------------------------------------------------
-    if (event->key() == Qt::Key_S){
+    if (event->key() == Qt::Key_Z){
         personita->resettBanRight();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derechai.png"));
-    }else if (event->key()==Qt::Key_A) {
+    }else if (event->key()==Qt::Key_X) {
         personita->resettBanLeft();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdaa.png"));
     }

@@ -3,6 +3,7 @@
 
 #include <QObject>
 
+
 class teki
 {
 public:

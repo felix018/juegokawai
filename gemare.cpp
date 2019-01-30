@@ -24,6 +24,11 @@ void gemare::move(){
                 //vil->start(2500);
                 //setPixmap(QPixmap(":/imágenes del juego/040.jpg"));
                         setPos(x(),160);
+                        gamm->scene->setBackgroundBrush(Qt::black);
+                        gamm->scene->removeItem(gamm->per);
+                        gamm->scene->clear();
+                        gamm->TGame->stop();
+                        gamm->TGame2->stop();
                         winn = new QGraphicsTextItem();
                         winn->setPlainText(QString("YOU WIN!"));
                         winn->setPos(300, 100);

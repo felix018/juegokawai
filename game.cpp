@@ -23,6 +23,7 @@ game::game(QWidget *parent) :
     ui(new Ui::game)
 {
     ui->setupUi(this);
+    ui->guardado->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
 
     interacion=new QTimer;
     interacion->start(10);
@@ -273,6 +274,9 @@ void game::niveles(){
         scene->removeItem(huevo);
         scene->removeItem(huevo2);
         scene->removeItem(huevo3);
+        scene->removeItem(trap);
+        scene->removeItem(trick);
+        scene->removeItem(team);
         scene->clear();
 //----------------------------------------------------------------------------------------
         scene->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/esc3.png")));

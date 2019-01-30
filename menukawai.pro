@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets serialport
 
 TARGET = menukawai
 TEMPLATE = app
@@ -49,9 +49,10 @@ SOURCES += \
     prum.cpp \
     jefe.cpp \
     huevi.cpp \
-    alien2.cpp \
-    tekiga.cpp \
-    ultimod.cpp
+    rubi.cpp \
+    sangre.cpp \
+    amenaza.cpp \
+    fy.cpp
 
 QT+= multimedia
 
@@ -81,9 +82,10 @@ HEADERS += \
     prum.h \
     jefe.h \
     huevi.h \
-    alien2.h \
-    tekiga.h \
-    ultimod.h
+    rubi.h \
+    sangre.h \
+    amenaza.h \
+    fy.h
 
 FORMS += \
         mainwindow.ui \

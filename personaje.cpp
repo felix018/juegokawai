@@ -2,9 +2,12 @@
 #include <iostream>
 #include<QDebug>
 #include <QGraphicsPixmapItem>
-#include "alien2.h"
+//#include "alien2.h"
 #include "play2.h"
-#include "tekiga.h"
+//#include "tekiga.h"
+#include "huevi.h"
+#include "amenaza.h"
+#include "fy.h"
 extern play2 *gamme;
 
 personaje::personaje(QGraphicsItem *parent): QObject (), QGraphicsPixmapItem(parent)
@@ -108,18 +111,17 @@ void personaje::generar2(){
 
 }
 void personaje::generar3(){
-    alien2 *gul = new alien2();
-    gul->setPos(WIDTH-100, 15);
-    gamme->scenes->addItem(gul);
-
+    amenaza *ame = new amenaza();
+    ame->setPos(WIDTH-100, 15);
+    gamme->scenes->addItem(ame);
 
 }
 void personaje::generar4(){
     c++;
     if(c<12){
-        tekiga *ga = new tekiga();
-        ga->setPos(WIDTH-100,HEIGHT-180);
-        gamme->scenes->addItem(ga);
+        kilua = new FY();
+        kilua->setPos(WIDTH-100,HEIGHT-180);
+        gamme->scenes->addItem(kilua);
     }
 
 }

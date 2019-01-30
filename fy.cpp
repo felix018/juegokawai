@@ -1,29 +1,25 @@
-#include "huevi.h"
-#include "personaje.h"
-#include "play2.h"
+#include "fy.h"
 #include <QDebug>
-#include "game.h"
+#include "sangre.h"
 #include <QFont>
 #include "personaje.h"
 #include <typeinfo>
 #include "proyectiles.h"
+#include "play2.h"
 #include <QFont>
 #include "sangre.h"
-
 extern play2 *gamme;
 
-huevi::huevi(QObject *parent) : QObject(parent)
+FY::FY(QGraphicsItem  *parent): QObject(), QGraphicsPixmapItem(parent)
 {
-    setPixmap(QPixmap(":/imágenes del juego/malpos1.png"));
-    connect(vel,SIGNAL(timeout()),this,SLOT(anda()));                  //Timer para mover el huevo
-    connect(tras, SIGNAL(timeout()),this,SLOT(anda()));
-
-    vel->start(60);
-    tras->start(3000);
+    setPixmap((QPixmap(":/imágenes del juego/malpos1.png")));
+    connect(firolai, SIGNAL(timeout()),this,SLOT(satesate()));
+    connect(nevermind, SIGNAL(timeout()),this,SLOT(samaland()));
+    firolai->start(50);
+    nevermind->start(2000);
 
 }
-void huevi::anda()
-{
+void FY::satesate(){
     if(pos().x() > 300){
         setPos(x()-5,y());
         if(cont==0){
@@ -43,9 +39,10 @@ void huevi::anda()
             cont=0;
         }
     }else setPos(x(),y());
-
-
 }
-void huevi::muera(){
-
+void FY::samaland(){
+    sangre *hurara = new sangre();
+    hurara->setPos(this->x()-20,this->y()+25);
+    gamme->scenes->addItem(hurara);
 }
+

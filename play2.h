@@ -17,6 +17,7 @@
 #include "trampa.h"
 #include "caida.h"
 #include "joyas.h"
+#include "jefe.h"
 
 #define WIDTH 1000
 #define HEIGHT 400
@@ -36,6 +37,7 @@ public:
     personaje *persona;
     personaje *personita;
     QTimer *interaccion;
+    jefe *parte;
 
     void keyPressEvent(QKeyEvent * events);
     void keyReleaseEvent(QKeyEvent * events);
@@ -47,6 +49,8 @@ public:
     int cambio=0;
     int flag=0;
     bool player=false;
+    int keita=0;
+    int sora=0;
     int huevos=10;
     QGraphicsTextItem *tex;
     //disparos *espada;
@@ -61,9 +65,8 @@ public:
 
 
     QTimer *Jtimen=new QTimer();
-    QTimer *TGamen = new QTimer();
-    QTimer *TGame2n = new QTimer();
-    QTimer *TGame3n = new QTimer();
+    QTimer *alis = new QTimer();
+    QTimer *raptalia = new QTimer();
 
     void inicia(int u);
 
