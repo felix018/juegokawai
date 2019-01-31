@@ -13,6 +13,8 @@
 #include "gemare.h"
 #include "espada.h"
 #include "segundo.h"
+#include "rubi.h"
+#include "kaita.h"
 //#include "tekiga.h"
 segundo *vamos;
 
@@ -68,6 +70,24 @@ void play2::inicia(int u)
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
     QObject::connect(raptalia, SIGNAL(timeout()),persona,SLOT(generar4()));
     QObject::connect(alis, SIGNAL(timeout()),persona,SLOT(generar3()));
+    rubi *port = new rubi();
+    port->setPos(100,70);
+    scenes->addItem(port);
+    rubi *pringa = new rubi();
+    pringa->setPos(200,70);
+    scenes->addItem(pringa);
+    rubi *peron = new rubi();
+    peron->setPos(400,70);
+    scenes->addItem(peron);
+    rubi *kinge = new rubi();
+    kinge->setPos(500,70);
+    scenes->addItem(kinge);
+    kaita *stares = new kaita();
+    stares->setPos(700,70);
+    scenes->addItem(stares);
+    rubi *furei = new rubi();
+    furei->setPos(800,70);
+    scenes->addItem(furei);
 
     vidas1 = new vida();
     vidas2 = new vida();
@@ -80,11 +100,11 @@ void play2::inicia(int u)
 }
 void play2::keyPressEvent(QKeyEvent * events){
 //----------------personaje 1-----------------------------------------
-    if(events->key()==Qt::Key_J){
+    if(events->key()==Qt::Key_K){
         persona->settBanRight();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 derechai.png"));
         qDebug() << "left";
-    }else if (events->key() == Qt::Key_K){
+    }else if (events->key() == Qt::Key_J){
         persona->settBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita1 izquierdai2.png"));
         qDebug() << "right";
@@ -134,10 +154,10 @@ void play2::keyPressEvent(QKeyEvent * events){
     }
 }
 void play2::keyReleaseEvent(QKeyEvent *event){
-    if (event->key() == Qt::Key_J){
+    if (event->key() == Qt::Key_K){
         persona->resettBanRight();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 derechai.png"));
-    }else if (event->key()==Qt::Key_K) {
+    }else if (event->key()==Qt::Key_J) {
         persona->resettBanLeft();
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }

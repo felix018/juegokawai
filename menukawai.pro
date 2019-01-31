@@ -52,7 +52,8 @@ SOURCES += \
     rubi.cpp \
     sangre.cpp \
     amenaza.cpp \
-    fy.cpp
+    fy.cpp \
+    kaita.cpp
 
 QT+= multimedia
 
@@ -85,7 +86,8 @@ HEADERS += \
     rubi.h \
     sangre.h \
     amenaza.h \
-    fy.h
+    fy.h \
+    kaita.h
 
 FORMS += \
         mainwindow.ui \

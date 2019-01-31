@@ -7,7 +7,7 @@ extern play2 *gamme;
 rubi::rubi()
 {
     //esta clase no pertenece al game principal......
-    setPixmap(QPixmap(":/imágenes del juego/roja.png"));
+    setPixmap(QPixmap(":/imágenes del juego/azul.png"));
     connect(tel,SIGNAL(timeout()),this, SLOT(mot()));
     connect(vil,SIGNAL(timeout()),gamme->persona, SLOT(generar3()));
     //connect(fil,SIGNAL(timeout()),gamme->persona, SLOT(generar2()));
