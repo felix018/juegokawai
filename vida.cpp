@@ -1,8 +1,8 @@
 #include "vida.h"
 #include <QDebug>
 #include "game.h"
-//#include <QSerialPort>
-//#include <QSerialPortInfo>
+#include <QSerialPort>
+#include <QSerialPortInfo>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QFont>
