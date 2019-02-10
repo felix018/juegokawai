@@ -16,10 +16,10 @@ void prum::movi()
         if (typeid(*(colliding_items[i])) == typeid(personaje)){
             gamme->scenes->removeItem(this);
             if(colliding_items[i]==gamme->persona){
-                 gamme->vidas1->decreceN2();
+                 gamme->vivir1->decreceraN2();
             }
             if(colliding_items[i]==gamme->personita){
-                gamme->vidas2->decrecerN2();
+                gamme->vivir2->decrecereN2();
             }
             qDebug()<<"bye1";
             return;

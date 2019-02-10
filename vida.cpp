@@ -17,12 +17,16 @@ extern game *gamm;
 
 vida::vida(QObject *parent) : QObject(parent)
 {
+
     over = new QGraphicsTextItem();
     arduino_is_available = false;
     arduino_port_name = "COM3";
     arduino = new QSerialPort;
-    connect(will,SIGNAL(timeout()),this,SLOT(vim()));
+
+    connect(will,SIGNAL(timeout()),this,SLOT(leordones()));
+
     will->start(2000);
+
 
     qDebug() << "Number of available ports: " << QSerialPortInfo::availablePorts().length();
         foreach(const QSerialPortInfo &serialPortInfo, QSerialPortInfo::availablePorts()){
@@ -70,32 +74,11 @@ void vida::decrece2(){
             decrece1();
         };
 }
-void vida::decreceN2(){
-    vid1--;
-    qDebug()<<vid1;
-    if(vid1<=0) gameover();
-}
-void vida::decrecerN2(){
-    vid2--;
-    if(vid2<1){
-            vid1=0;
-            decreceN2();
-        };
-
-}
-
-void vida::muerteT(){
+void vida::sayonara(){
     vid1=0;
-    qDebug()<<vid1;
-    if(vid1<=0) gameover();
+    if(vid1<=0)GameOver();
 }
-void vida::muerteT2(){
-    vid2=0;
-    if(vid2<1){
-            vid1=0;
-            muerteT();
-        };
-}
+
 void vida::decreceJazul(){
     vid1=3;
     qDebug()<<"joya azul";
@@ -115,22 +98,9 @@ void vida::GameOver(){
       gamm->scene->addItem(over);
 
 }
-void vida::gameover(){
-    qDebug()<<"de malas";
-    gamme->scenes->setBackgroundBrush(Qt::black);
-    gamme->scenes->removeItem(gamme->persona);
-    gamme->scenes->removeItem(gamme->personita);
-    gamme->alis->stop();
-    gamme->raptalia->stop();
-    gamme->scenes->clear();
-    over->setPlainText(QString("GAME OVER"));
-    over->setPos(300,100);
-    over->setDefaultTextColor(Qt::white);
-    over->setFont(QFont("DEATH",50));
-    gamme->scenes->addItem(over);
 
-}
-void vida::vim(){
+
+void vida::leordones(){
     QString valor = QString::number(gamm->vt);
         if(arduino->isWritable()){
             arduino->write(valor.toStdString().c_str());

@@ -8,7 +8,9 @@
 #include "huevi.h"
 #include "amenaza.h"
 #include "fy.h"
+#include "juguemos.h"
 extern play2 *gamme;
+extern juguemos *jut;
 
 personaje::personaje(QGraphicsItem *parent): QObject (), QGraphicsPixmapItem(parent)
 {

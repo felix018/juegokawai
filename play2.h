@@ -18,6 +18,7 @@
 #include "caida.h"
 #include "joyas.h"
 #include "jefe.h"
+#include "vivamos.h"
 
 #define WIDTH 1000
 #define HEIGHT 400
@@ -58,6 +59,8 @@ public:
     //parte de las vidas
     vida *vidas1;
     vida *vidas2;
+    vivamos *vivir1;
+    vivamos *vivir2;
     bool playe=false;
 
     QTimer *interar;

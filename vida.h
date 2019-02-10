@@ -28,6 +28,8 @@ public:
     void decrecerN2();
     void decreceJazul();
     void muerteT();
+    void sayonara();
+    void sayonara2();
     void muerteT2();
     void GameOver();
     void gameover();
@@ -38,7 +40,7 @@ private:
     QString arduino_port_name;
     bool arduino_is_available;
 private slots:
-    void vim();
+    void leordones();
 
 
 

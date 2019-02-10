@@ -53,11 +53,13 @@ void play2::inicia(int u)
     //if (a == 1) playe = true;
     scenes->setBackgroundBrush(QBrush(QImage(":/imágenes del juego/levelP2e.png")));
 //-------------------------------------------personajes---------------------------------------------------
+
     persona= new personaje();
     persona->setPixmap(QPixmap(":/imágenes del juego/muñequita2 derechai.png"));
     persona->setPos(15,280) ;
     persona->setHeight(HEIGHT);
     scenes->addItem(persona);
+
 
     //----------------------------------------------------------------------------
     personita=new personaje();
@@ -66,10 +68,12 @@ void play2::inicia(int u)
     personita->setHeight(HEIGHT);
     scenes->addItem(personita);
     QObject::connect(Jtimen, SIGNAL(timeout()),personita,SLOT(jump()));
+
 //-------------------------------Timers villanos y trampas-------------------------------
     //QObject::connect(TGamen, SIGNAL(timeout()),persona,SLOT(generar()));
     QObject::connect(raptalia, SIGNAL(timeout()),persona,SLOT(generar4()));
     QObject::connect(alis, SIGNAL(timeout()),persona,SLOT(generar3()));
+
     rubi *port = new rubi();
     port->setPos(100,70);
     scenes->addItem(port);
@@ -89,8 +93,10 @@ void play2::inicia(int u)
     furei->setPos(800,70);
     scenes->addItem(furei);
 
-    vidas1 = new vida();
-    vidas2 = new vida();
+
+
+    vivir1 = new vivamos();
+    vivir2 = new vivamos();
     alis->start(2000);
     raptalia->start(2000);
 

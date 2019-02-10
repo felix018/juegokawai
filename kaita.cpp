@@ -2,7 +2,9 @@
 #include "personaje.h"
 #include "fy.h"
 #include "play2.h"
+#include "juguemos.h"
 extern play2 *gamme;
+extern juguemos *jut;
 
 kaita::kaita()
 {
@@ -17,7 +19,8 @@ void kaita::vamp(){
     QList<QGraphicsItem *> colliding_items = collidingItems(); //lista de elemntos que colisionan
     for (int i = 0, n = colliding_items.size(); i < n; i++ ){
         if (typeid(*(colliding_items[i])) == typeid(personaje)){
-            gamme->scenes->removeItem(this);
+            //jut->scenas->removeItem(this);
+
             if(colliding_items[i]==gamme->persona){
 
                         setPos(x(),160);

@@ -53,7 +53,9 @@ SOURCES += \
     sangre.cpp \
     amenaza.cpp \
     fy.cpp \
-    kaita.cpp
+    kaita.cpp \
+    juguemos.cpp \
+    vivamos.cpp
 
 QT+= multimedia
 
@@ -87,7 +89,9 @@ HEADERS += \
     sangre.h \
     amenaza.h \
     fy.h \
-    kaita.h
+    kaita.h \
+    juguemos.h \
+    vivamos.h
 
 FORMS += \
         mainwindow.ui \
@@ -99,7 +103,8 @@ FORMS += \
     histo3.ui \
     histo4.ui \
     play2.ui \
-    segundo.ui
+    segundo.ui \
+    juguemos.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

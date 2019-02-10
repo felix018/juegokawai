@@ -27,11 +27,10 @@ void piedritas::move(){
         if (typeid(*(colliding_items[i])) == typeid(personaje)){
             gamm->scene->removeItem(this);
             if(colliding_items[i]==gamm->per){
-                gamm->vid->decreceJazul();
+                gamm->vid->sayonara();
                 vil->start(2500);
-                if(gamm->player==true){
-                    gamm->vid2->decrece2();
-                }
+
+
                  qDebug()<<"bye1";
             }
              gamm->vt=(gamm->vid->vid1)*10;

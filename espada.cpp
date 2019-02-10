@@ -30,7 +30,7 @@ void espada::mueve()
             gamme->scenes->removeItem(this);
             delete this;  //se libera la memoria
         }
-        if(gamme->vidas1->vid1<=0){
+        if(gamme->vivir1->vida1<=0){
              toma->stop();  //se para el timer
         }
         //if(gamme->vidas1->vid1<=0){

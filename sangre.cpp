@@ -1,6 +1,8 @@
 #include "sangre.h"
 #include "play2.h"
+#include "juguemos.h"
 extern play2 *gamme;
+extern juguemos *jut;
 
 
 sangre::sangre()
@@ -17,15 +19,13 @@ void sangre::teteike()
             gamme->scenes->removeItem(this);
 
             if(colliding_items[i]==gamme->persona){
-                gamme->vidas1->decreceN2();
+                gamme->vivir1->muerteT();
                  qDebug()<<"bye1";
             }
             if(colliding_items[i]==gamme->personita){
-                gamme->vidas2->decrecerN2();
+                gamme->vivir2->muerteT2();
             }
-             gamme->vto=(gamme->vidas1->vid1)*10+gamme->vidas2->vid2;
-             qDebug()<<gamme->vto<<"zzzzzzz";
-             return;
+
         }
     }
     setPos(x()-20, y());
