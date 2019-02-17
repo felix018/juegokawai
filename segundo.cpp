@@ -19,6 +19,7 @@ segundo::segundo(QWidget *parent) :
     ui(new Ui::segundo)
 {
     ui->setupUi(this);
+    ui->holi->setStyleSheet("QPushButton { background-color : transparent; color : white; }");
 }
 
 segundo::~segundo()

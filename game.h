@@ -49,7 +49,7 @@ public:
     void keyReleaseEvent(QKeyEvent * event);
     void setHeight(int w);
     int cont=0;
-    int vt;
+    int vt=6;
     int p1=0, p2=0;
     int cambio=0;
     int flag=0;

@@ -9,18 +9,19 @@
 #include "personaje.h"
 #include "trampa.h"
 #include "play2.h"
+#include "menu1.h"
 extern play2 *gamme;
 
 extern game *gamm;
 
-
+//extern menu1 *eleccion;
 
 vida::vida(QObject *parent) : QObject(parent)
 {
 
     over = new QGraphicsTextItem();
     arduino_is_available = false;
-    arduino_port_name = "COM3";
+    arduino_port_name = "COM9";
     arduino = new QSerialPort;
 
     connect(will,SIGNAL(timeout()),this,SLOT(leordones()));
@@ -54,7 +55,7 @@ vida::vida(QObject *parent) : QObject(parent)
                // open and configure the serialport
                arduino->setPortName(arduino_port_name);
                arduino->open(QSerialPort::WriteOnly);
-               arduino->setBaudRate(QSerialPort::Baud115200);
+               arduino->setBaudRate(QSerialPort::Baud9600);
                arduino->setDataBits(QSerialPort::Data8);
                arduino->setParity(QSerialPort::NoParity);
                arduino->setStopBits(QSerialPort::OneStop);
@@ -105,5 +106,9 @@ void vida::leordones(){
         if(arduino->isWritable()){
             arduino->write(valor.toStdString().c_str());
         }
+//    QString name = QString::number(eleccion->b);
+//        if(arduino->isWritable()){
+//            arduino->write(name.toStdString().c_str());
+//        }
 }
 

@@ -55,5 +55,7 @@
         <file>imágenes del juego/muñequito1 izquierdaa.png</file>
         <file>imágenes del juego/muñequito1 izquierdai2.png</file>
         <file>imágenes del juego/sombra.png</file>
+        <file>imágenes del juego/muñequito shoot buen.png</file>
+        <file>imágenes del juego/portadaplay.png</file>
     </qresource>
 </RCC>

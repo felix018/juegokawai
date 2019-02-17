@@ -138,11 +138,11 @@ void play2::keyPressEvent(QKeyEvent * events){
     }
 
 //-------------------------------------------personaje2---------------------------------
-    if(events->key()==Qt::Key_Z){
+    if(events->key()==Qt::Key_X){
         personita->settBanRight();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derecha.png"));
         qDebug() << "left";
-    }else if (events->key() == Qt::Key_X){
+    }else if (events->key() == Qt::Key_Z){
         personita->settBanLeft();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdai2.png"));
         qDebug() << "right";
@@ -152,7 +152,7 @@ void play2::keyPressEvent(QKeyEvent * events){
         espada *espi;
         espi = new espada();
         qDebug()<<"dispararrrrrrr";
-        personita->setPixmap(QPixmap(":/imágenes del juego/muñequita shoot buen.png"));
+        personita->setPixmap(QPixmap(":/imágenes del juego/muñequito shoot buen.png"));
         espi->setPixmap(QPixmap(":/imágenes del juego/espin.png"));
         espi->setPos(personita->x()+60,personita->y()+20);
         scenes->addItem(espi);
@@ -168,10 +168,10 @@ void play2::keyReleaseEvent(QKeyEvent *event){
         persona->setPixmap(QPixmap(":/imágenes del juego/muñequita3 izquierdai.png"));
     }
 //--------------------------personaje 2-------------------------------------------------
-    if (event->key() == Qt::Key_Z){
+    if (event->key() == Qt::Key_X){
         personita->resettBanRight();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 derechai.png"));
-    }else if (event->key()==Qt::Key_X) {
+    }else if (event->key()==Qt::Key_Z) {
         personita->resettBanLeft();
         personita->setPixmap(QPixmap(":/imágenes del juego/muñequito1 izquierdaa.png"));
     }
